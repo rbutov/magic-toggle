@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		2279D48E2D3DEC6700F5F673 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2279D4742D3DEC6600F5F673 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2279D47B2D3DEC6600F5F673;
+			remoteInfo = "Magic Toggle";
+		};
+		2279D4982D3DEC6700F5F673 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2279D4742D3DEC6600F5F673 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2279D47B2D3DEC6600F5F673;
+			remoteInfo = "Magic Toggle";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2279D47C2D3DEC6600F5F673 /* Magic Toggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Magic Toggle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2279D48D2D3DEC6700F5F673 /* Magic ToggleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Magic ToggleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2279D4972D3DEC6700F5F673 /* Magic ToggleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Magic ToggleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		2279D47E2D3DEC6600F5F673 /* Magic Toggle */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Magic Toggle";
+			sourceTree = "<group>";
+		};
+		2279D4902D3DEC6700F5F673 /* Magic ToggleTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Magic ToggleTests";
+			sourceTree = "<group>";
+		};
+		2279D49A2D3DEC6700F5F673 /* Magic ToggleUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Magic ToggleUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2279D4792D3DEC6600F5F673 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2279D48A2D3DEC6700F5F673 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2279D4942D3DEC6700F5F673 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2279D4732D3DEC6600F5F673 = {
+			isa = PBXGroup;
+			children = (
+				2279D47E2D3DEC6600F5F673 /* Magic Toggle */,
+				2279D4902D3DEC6700F5F673 /* Magic ToggleTests */,
+				2279D49A2D3DEC6700F5F673 /* Magic ToggleUITests */,
+				2279D47D2D3DEC6600F5F673 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2279D47D2D3DEC6600F5F673 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2279D47C2D3DEC6600F5F673 /* Magic Toggle.app */,
+				2279D48D2D3DEC6700F5F673 /* Magic ToggleTests.xctest */,
+				2279D4972D3DEC6700F5F673 /* Magic ToggleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2279D47B2D3DEC6600F5F673 /* Magic Toggle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2279D4A12D3DEC6700F5F673 /* Build configuration list for PBXNativeTarget "Magic Toggle" */;
+			buildPhases = (
+				2279D4782D3DEC6600F5F673 /* Sources */,
+				2279D4792D3DEC6600F5F673 /* Frameworks */,
+				2279D47A2D3DEC6600F5F673 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				2279D47E2D3DEC6600F5F673 /* Magic Toggle */,
+			);
+			name = "Magic Toggle";
+			packageProductDependencies = (
+			);
+			productName = "Magic Toggle";
+			productReference = 2279D47C2D3DEC6600F5F673 /* Magic Toggle.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2279D48C2D3DEC6700F5F673 /* Magic ToggleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2279D4A42D3DEC6700F5F673 /* Build configuration list for PBXNativeTarget "Magic ToggleTests" */;
+			buildPhases = (
+				2279D4892D3DEC6700F5F673 /* Sources */,
+				2279D48A2D3DEC6700F5F673 /* Frameworks */,
+				2279D48B2D3DEC6700F5F673 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2279D48F2D3DEC6700F5F673 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				2279D4902D3DEC6700F5F673 /* Magic ToggleTests */,
+			);
+			name = "Magic ToggleTests";
+			packageProductDependencies = (
+			);
+			productName = "Magic ToggleTests";
+			productReference = 2279D48D2D3DEC6700F5F673 /* Magic ToggleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2279D4962D3DEC6700F5F673 /* Magic ToggleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2279D4A72D3DEC6700F5F673 /* Build configuration list for PBXNativeTarget "Magic ToggleUITests" */;
+			buildPhases = (
+				2279D4932D3DEC6700F5F673 /* Sources */,
+				2279D4942D3DEC6700F5F673 /* Frameworks */,
+				2279D4952D3DEC6700F5F673 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2279D4992D3DEC6700F5F673 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				2279D49A2D3DEC6700F5F673 /* Magic ToggleUITests */,
+			);
+			name = "Magic ToggleUITests";
+			packageProductDependencies = (
+			);
+			productName = "Magic ToggleUITests";
+			productReference = 2279D4972D3DEC6700F5F673 /* Magic ToggleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2279D4742D3DEC6600F5F673 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					2279D47B2D3DEC6600F5F673 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					2279D48C2D3DEC6700F5F673 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 2279D47B2D3DEC6600F5F673;
+					};
+					2279D4962D3DEC6700F5F673 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 2279D47B2D3DEC6600F5F673;
+					};
+				};
+			};
+			buildConfigurationList = 2279D4772D3DEC6600F5F673 /* Build configuration list for PBXProject "Magic Toggle" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2279D4732D3DEC6600F5F673;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 2279D47D2D3DEC6600F5F673 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2279D47B2D3DEC6600F5F673 /* Magic Toggle */,
+				2279D48C2D3DEC6700F5F673 /* Magic ToggleTests */,
+				2279D4962D3DEC6700F5F673 /* Magic ToggleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2279D47A2D3DEC6600F5F673 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2279D48B2D3DEC6700F5F673 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2279D4952D3DEC6700F5F673 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2279D4782D3DEC6600F5F673 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2279D4892D3DEC6700F5F673 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2279D4932D3DEC6700F5F673 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2279D48F2D3DEC6700F5F673 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2279D47B2D3DEC6600F5F673 /* Magic Toggle */;
+			targetProxy = 2279D48E2D3DEC6700F5F673 /* PBXContainerItemProxy */;
+		};
+		2279D4992D3DEC6700F5F673 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2279D47B2D3DEC6600F5F673 /* Magic Toggle */;
+			targetProxy = 2279D4982D3DEC6700F5F673 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2279D49F2D3DEC6700F5F673 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2279D4A02D3DEC6700F5F673 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		2279D4A22D3DEC6700F5F673 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Magic Toggle/Magic_Toggle.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Magic Toggle/Preview Content\"";
+				DEVELOPMENT_TEAM = 665B7HBH9H;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Ruslan-Butov.Magic-Toggle";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2279D4A32D3DEC6700F5F673 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Magic Toggle/Magic_Toggle.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Magic Toggle/Preview Content\"";
+				DEVELOPMENT_TEAM = 665B7HBH9H;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Ruslan-Butov.Magic-Toggle";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		2279D4A52D3DEC6700F5F673 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 665B7HBH9H;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Ruslan-Butov.Magic-ToggleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Magic Toggle.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Magic Toggle";
+			};
+			name = Debug;
+		};
+		2279D4A62D3DEC6700F5F673 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 665B7HBH9H;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Ruslan-Butov.Magic-ToggleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Magic Toggle.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Magic Toggle";
+			};
+			name = Release;
+		};
+		2279D4A82D3DEC6700F5F673 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 665B7HBH9H;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Ruslan-Butov.Magic-ToggleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Magic Toggle";
+			};
+			name = Debug;
+		};
+		2279D4A92D3DEC6700F5F673 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 665B7HBH9H;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Ruslan-Butov.Magic-ToggleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Magic Toggle";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2279D4772D3DEC6600F5F673 /* Build configuration list for PBXProject "Magic Toggle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2279D49F2D3DEC6700F5F673 /* Debug */,
+				2279D4A02D3DEC6700F5F673 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2279D4A12D3DEC6700F5F673 /* Build configuration list for PBXNativeTarget "Magic Toggle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2279D4A22D3DEC6700F5F673 /* Debug */,
+				2279D4A32D3DEC6700F5F673 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2279D4A42D3DEC6700F5F673 /* Build configuration list for PBXNativeTarget "Magic ToggleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2279D4A52D3DEC6700F5F673 /* Debug */,
+				2279D4A62D3DEC6700F5F673 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2279D4A72D3DEC6700F5F673 /* Build configuration list for PBXNativeTarget "Magic ToggleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2279D4A82D3DEC6700F5F673 /* Debug */,
+				2279D4A92D3DEC6700F5F673 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2279D4742D3DEC6600F5F673 /* Project object */;
+}
