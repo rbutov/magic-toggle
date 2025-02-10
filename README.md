@@ -4,31 +4,68 @@ Magic Toggle is a macOS menu bar application that automatically manages Apple Ma
 
 ## Features
 
-- Automatically connects/disconnects paired Apple Magic devices when external displays are connected/disconnected
-- Menu bar icon shows current monitor status (single/dual display)
-- Simple and lightweight interface
-- Runs in the background
+- Automatically connects saved devices when an external display is connected
+- Automatically disconnects devices when external displays are disconnected
+- Manages multiple Bluetooth devices simultaneously
+- Shows real-time device connection status
+- Preserves device history and settings between app launches
+- New devices are automatically saved for convenience
+- Supports batch operations for all saved devices
 
 ## Requirements
 
 - macOS 13.0 or later
 - Apple Magic devices (Magic Mouse, Magic Keyboard, etc.)
 - External display support
+- [blueutil](https://github.com/toy/blueutil) command-line tool
 
 ## Installation
 
-1. Download the latest release from the [Releases](https://github.com/username/magic-toggle/releases) page
-2. Move Magic Toggle.app to your Applications folder
-3. Launch Magic Toggle
-4. Grant necessary permissions when prompted (Bluetooth, Accessibility)
+1. Install blueutil:
+
+```bash
+brew install blueutil
+```
+
+2. Download Magic Toggle.app
+3. Move to your Applications folder
+4. Launch Magic Toggle
+5. Grant necessary permissions when prompted (Bluetooth, Accessibility)
 
 ## Usage
 
-Magic Toggle runs in your menu bar and works automatically:
+### Menu Bar
 
-- When you connect an external display, your paired Magic devices will automatically connect
-- When you disconnect the external display, Magic devices will automatically disconnect
-- Click the menu bar icon to access About and Quit options
+- Single monitor icon: No external display connected
+- Dual monitor icon: External display connected
+- Click to access:
+  - Devices window
+  - About window
+  - Quit option
+
+### Devices Window
+
+- Device Status Indicators:
+  - Green: Connected
+  - Red: Disconnected but paired
+  - Gray: Not paired
+  - Yellow: Pairing in progress
+  - Blue: Connecting
+  - Orange: Unpairing
+- Features:
+  - Toggle switch to save/unsave devices
+  - "Pair Saved"/"Unpair Saved" button for batch operations
+  - "Show only saved devices" filter (on by default)
+  - Refresh button to manually update device list
+  - Remove button (trash icon) for unpaired devices
+  - Last seen times for each device
+
+### Automatic Operation
+
+- Saved devices automatically connect when an external display is detected
+- Devices automatically disconnect when external display is removed
+- Device list refreshes automatically every 5 seconds
+- New devices are saved by default for convenience
 
 ## Building from Source
 
