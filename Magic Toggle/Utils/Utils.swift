@@ -7,6 +7,7 @@
 
 import Cocoa
 import Foundation
+import SwiftUI
 
 // MARK: - Logger
 enum LogLevel {
@@ -52,8 +53,18 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private var previousDisplayCount = 0
     private var aboutWindowController: AboutWindowController?
     private var devicesWindowController: DevicesWindowController?
+    private var blueUtilWarningController: BlueUtilWarningWindowController?
 
     func applicationDidFinishLaunching(_ notification: Notification) {
+        // Check for blueutil first
+        if !checkBlueUtilInstallation() {
+            blueUtilWarningController = BlueUtilWarningWindowController()
+            blueUtilWarningController?.showWindow(nil)
+            NSApp.activate(ignoringOtherApps: true)
+            return
+        }
+        
+        // Continue with normal app initialization
         NSApp.setActivationPolicy(.prohibited)
         setupMenuBar()
         startMonitorDetection()
@@ -136,4 +147,22 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         }
         NSApplication.shared.terminate(nil)
     }
+
+    private func checkBlueUtilInstallation() -> Bool {
+        let process = Process()
+        process.launchPath = "/usr/bin/which"
+        process.arguments = [blueutilPath]
+        
+        let pipe = Pipe()
+        process.standardOutput = pipe
+        
+        do {
+            try process.run()
+            process.waitUntilExit()
+            return process.terminationStatus == 0
+        } catch {
+            return false
+        }
+    }
 }
+
