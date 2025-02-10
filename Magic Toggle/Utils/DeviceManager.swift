@@ -173,7 +173,7 @@ class DeviceManager: ObservableObject {
             if let index = devices.firstIndex(where: { $0.id == currentDevice.id }) {
                 // Preserve existing device's saved status
                 let isSaved = devices[index].isSaved
-                var updatedDevice = currentDevice
+                let updatedDevice = currentDevice
                 updatedDevice.isSaved = isSaved
                 devices[index] = updatedDevice
             } else {
@@ -269,9 +269,7 @@ class DeviceManager: ObservableObject {
             }
             
             // Refresh devices after operations are complete
-            DispatchQueue.main.async {
-                self.refreshDevices()
-            }
+            self.refreshDevices()
         }
     }
     
@@ -321,28 +319,30 @@ class DeviceManager: ObservableObject {
             let output = shell(command)
             Logger.log("Command output: '\(output)'", level: .info)
             
-            // For pairing, check if device is actually paired regardless of command output
+            // For pairing, check if device is actually paired
             if description.contains("Pairing") {
                 if let deviceId = command.components(separatedBy: " ").last?.replacingOccurrences(of: "\"", with: ""),
                    isPairingSuccessful(deviceId: deviceId) {
                     Logger.log("Device is paired successfully: \(deviceId)", level: .info)
                     return true
                 }
-                
-                // If not paired and output is empty, consider it a failure
-                if output.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-                    Logger.log("Empty output for pairing command, considering as failure", level: .warning)
-                    // Continue to next attempt
-                } else if !isErrorOutput(output) {
-                    Logger.log("Success: \(description)", level: .info)
+            }
+            // For connecting, check if device is actually connected
+            else if description.contains("Connecting") {
+                if let deviceId = command.components(separatedBy: " ").last?.replacingOccurrences(of: "\"", with: ""),
+                   isDeviceConnected(deviceId: deviceId) {
+                    Logger.log("Device is connected successfully: \(deviceId)", level: .info)
                     return true
                 }
-            } else {
-                // For other commands, check output for errors
-                if output.isEmpty || !isErrorOutput(output) {
-                    Logger.log("Success: \(description)", level: .info)
-                    return true
-                }
+            }
+            
+            // Check for empty output or errors
+            if output.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                Logger.log("Empty output, considering as failure", level: .warning)
+                // Continue to next attempt
+            } else if !isErrorOutput(output) {
+                Logger.log("Success: \(description)", level: .info)
+                return true
             }
             
             Logger.log("Failed: \(description) - \(output)", level: .warning)
@@ -361,7 +361,9 @@ class DeviceManager: ObservableObject {
     func pairAllSavedDevices() {
         let savedDevices = devices.filter { $0.isSaved }
         
-        Task.detached {
+        Task.detached { [weak self] in
+            guard let self = self else { return }
+            
             // Create array of async tasks
             await withTaskGroup(of: Void.self) { group in
                 for device in savedDevices {
@@ -411,9 +413,7 @@ class DeviceManager: ObservableObject {
             let success = await self.pairDeviceAndWait(deviceId: deviceId)
             self.updateDeviceStatus(deviceId, status: .idle)
             if success {
-                DispatchQueue.main.async {
-                    self.refreshDevices()
-                }
+                self.refreshDevices()
             }
         }
     }
@@ -422,16 +422,35 @@ class DeviceManager: ObservableObject {
         // Update UI state immediately
         updateDeviceStatus(deviceId, status: .connecting)
         
-        Task.detached {
+        Task.detached { [weak self] in
+            guard let self = self else { return }
+            
             Logger.log("Connecting device: \(deviceId)", level: .info)
-            _ = shell("\"\(blueutilPath)\" --connect \(deviceId)")
-            Logger.log("Done connecting device: \(deviceId)", level: .info)
+            let command = "\"\(blueutilPath)\" --connect \(deviceId)"
+            let success = await self.executeWithRetry(
+                command: command,
+                description: "Connecting device: \(deviceId)",
+                maxAttempts: 5  // Use fewer attempts for connection
+            )
+            
+            if success {
+                Logger.log("Successfully connected device: \(deviceId)", level: .info)
+            } else {
+                Logger.log("Failed to connect device: \(deviceId)", level: .error)
+            }
+            
             self.updateDeviceStatus(deviceId, status: .idle)
             
-            DispatchQueue.main.async {
-                self.refreshDevices()
-            }
+            self.refreshDevices()
         }
+    }
+    
+    private func isDeviceConnected(deviceId: String) -> Bool {
+        guard let pairedDevices = IOBluetoothDevice.pairedDevices() as? [IOBluetoothDevice],
+              let device = pairedDevices.first(where: { $0.addressString == deviceId }) else {
+            return false
+        }
+        return device.isConnected()
     }
     
     func unpairDevice(deviceId: String) {
